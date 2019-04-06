@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/formsSave}" th:object="${person}" method="post">
+        <lable for="firstName">Imię</lable>
+        <input id="firstName" type="text" th:field="*{firstName}">
+
+        <lable for="lastName">Nazwisko</lable>
+        <input id="lastName" type="text" th:field="*{lastName}">
+
+        <lable for="phone">Telefon</lable>
+        <input id="phone" type="text" th:field="*{phoneNumber}">
+
+        <lable for="salary">Pensja</lable>
+        <input id="salary" type="text" th:field="*{salary}">
+
+        <lable for="visible">Widoczny w systemie</lable>
+        <input id="visible" type="checkbox" th:field="*{visible}">
+
+        <input type="submit" value = "Zapisz">
+
+    </form>
+</body>
+</html>
